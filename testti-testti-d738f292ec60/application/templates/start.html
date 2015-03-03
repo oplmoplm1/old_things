@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+{% block content %}
+    <script type="text/javascript" src="../static/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="application/javascript" >
+{#        var filters = [{"name": "users", "op": "any", "val":{"name":"id","op":"neq","val":"{{ user_id }}"}},{"name": "users", "op": "is_null"}];#}
+        var filters = [{"name": "contents", "op":"like", "val":"%rational%"}];
+        $(document).ready(function(){
+            $("#answer").click(function(){
+                $(".answer").each(function(){
+                    var value = $(this).attr("id");
+                    var options = $(this).siblings("[name = '"+value+"']");
+                    var answer = $(this).text();
+                    options.each(function(){
+                        if ($(this).find("input").prop("checked")) {
+                            var sub_id = $(this).find("input").attr("name");
+                            var flag ;
+                            if ($(this).attr("class") == answer){
+{#                                $(this).css("background","green");#}
+                                flag = true;
+                            }else{
+{#                                $(this).css("background", "red");#}
+                                flag = false;
+                            }
+                            $.get("/record/"+sub_id,"flag="+flag,function(data){
+
+                            });
+                        }
+                    });
+                });
+
+            });
+            $.ajax({
+                url: 'http://localhost:5000/api/subject',
+                dataType: 'json',
+                contentType: "application/json",
+                data: {"q": JSON.stringify({"filters": filters, "disjunction":true})},
+                complete: function(data){
+                    var temp = data.responseText
+                    var a=$.parseJSON(temp)
+                    $("#box").append("<form>")
+                    $.each(a.objects, function(idx,obj){
+                        $("#box").append("<div class='contents'>"+(idx+1)+"."+obj.contents+"</div><br/>");
+
+                        if (obj.images.length != 0)
+                            $("#box").append("<div class='contents'> <img src='../static/images/sub/"+obj.images[0].url+".jpg'/></div><br/>");
+                        $("#box").append("<div  name='"+obj.id+"' class='A' ><input type='radio' name='"+obj.id+"' >A."+obj.option1+" </div><br/>");
+                        $("#box").append("<div  name='"+obj.id+"' class='B' ><input type='radio' name='"+obj.id+"' >B."+obj.option2+" </div><br/>");
+                        $("#box").append("<div  name='"+obj.id+"' class='C' ><input type='radio' name='"+obj.id+"' >C."+obj.option3+" </div><br/>");
+                        $("#box").append("<div  name='"+obj.id+"' class='D' ><input type='radio' name='"+obj.id+"' >D."+obj.option4+" </div><br/>");
+                        $("#box").append("<div class='answer' style='display: none' id='"+obj.id+"'>"+obj.answer+"</div><br/>");
+                    });
+
+                }
+            });
+        })
+    </script>
+
+    <script type="text/javascript" src="../static/ss/900387ec-vendor.min.js"></script>
+<script type="text/javascript" src="../static/ss/e7851492-Main.js"></script>
+{% endblock %}

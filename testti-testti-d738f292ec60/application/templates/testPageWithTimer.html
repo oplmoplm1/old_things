@@ -1,0 +1,78 @@
+{% extends "base.html" %}
+
+{% block content %}
+<link href="/static/css/layout.css" rel="stylesheet"/>
+
+<script type="text/javascript">
+    var filters = [{"name": "users", "op": "any", "val":{"name":"id","op":"neq","val":"{{ user_id }}"}},{"name": "users", "op": "is_null"}];
+
+</script>
+        <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script type="text/x-mathjax-config" >
+    MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
+    </script>
+
+	<div id="mainbody">
+	<!--leftsideBar-->
+			<div id="countTimePart">
+                <div style="height:200px"> </div>
+				<div id="timeSpent" class="leftsideBar">Time&nbsp;spent:</div>
+				<div id="clockBlock" class="leftsideBar">
+					<span class="clockNum">00</span><span class="clockColon">:</span><span class="clockNum">00</span>
+				</div>
+				<div id="pauseButton" class="leftsideBar">Pause</div>
+				<div id="handInTestPaperButton" class="leftsideBar">Hand&nbsp;in</div>
+			</div>
+
+	<!--leftsideBar end-->
+
+	<!--testPaperPart-->
+			<div id="testPaperPart">
+				<div class="testTitle">The questions</div>
+                <div class="partition partitionForQuestion"></div>
+				<form method="post">
+
+				</form>
+
+
+          <div id="result_table" class="showAnswerTable">
+				<table class="container questionTable table table-bordered">
+                    <tr class="row page-header"><td colspan="3" class="col-md-12 text-left">The results:</td></tr>
+					<tr class="row">
+						<td class="col-md-4 questionNumber label label-default" name="1">1</td>
+						<td class="col-md-4 questionNumber label label-default" name="2">2</td>
+						<td class="col-md-4 questionNumber label label-default" name="3">3</td>
+					</tr>
+                    <tr class="row">
+                        <td class="col-md-4  questionNumber label label-default" name="4">4</td>
+                        <td class="col-md-4 questionNumber label label-default" name="5">5</td>
+                        <td class="col-md-4 questionNumber label label-default" name="6">6</td>
+					</tr>
+                    <tr class="row">
+                        <td class="col-md-4 questionNumber label label-default" name="7">7</td>
+                        <td class="col-md-4 questionNumber label label-default" name="8">8</td>
+                        <td class="col-md-4 questionNumber label label-default" name="9">9</td>
+					</tr>
+                    <tr class="row">
+                    <td class="col-md-4 questionNumber label label-default" name="10">10</td>
+                    <td class="col-md-4 questionNumber label label-default" name="11">11</td>
+                    <td class="col-md-4 questionNumber label label-default" name="12">12</td>
+                    </tr>
+                    <tr class="row">
+                    <td class="col-md-4 questionNumber label label-default" name="13">13</td>
+                    <td class="col-md-4 questionNumber label label-default" name="14">14</td>
+                    <td class="col-md-4 questionNumber label label-default" name="15">15</td>
+                    </tr>
+                </table>
+	      </div>
+				<div class="testTitle"></div>
+			</div>
+	<!--testPaperPart end-->
+		</div>
+<!--mainbody end-->
+
+
+
+
+{% endblock %}
+

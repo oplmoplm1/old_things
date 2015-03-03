@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+
+{% block content %}
+<script type="text/javascript">
+    var filters = [{"name": "contents", "op":"like", "val":"%{{ keywords }}%"}];
+    var page = {{ page }};
+</script>
+     <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script type="text/x-mathjax-config" >
+    MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
+    </script>
+<div class="container">
+
+      <div class="blog-header">
+        <h1 class="blog-title">The Search Results</h1>
+        <p class="lead blog-description">The search results of keywords: {{ keywords }}</p>
+      </div>
+
+      <div class="row">
+          <div class="col-sm-8 blog-main" >
+          <div id="rs_container">
+
+          </div>
+
+          <ul class="pager">
+            <li><a href="{{ url_for('search',num=page-1) }}">Previous</a></li>
+            <li><a href="{{ url_for('search',num=page+1) }}">Next</a></li>
+          </ul>
+
+        </div><!-- /.blog-main -->
+
+        <div class="col-sm-3 col-sm-offset-1 blog-sidebar">
+          <div class="sidebar-module sidebar-module-inset">
+            <h4>About</h4>
+            <p>This is the search results of keywords: <em>{{ keywords }}</em>. </p>
+          </div>
+
+        </div><!-- /.blog-sidebar -->
+
+      </div><!-- /.row -->
+
+    </div>
+
+{% endblock %}

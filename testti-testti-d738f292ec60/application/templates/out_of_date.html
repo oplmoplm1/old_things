@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="jumbotron">
+      <div class="container">
+        <h1 class="center-block">Your account does not have permission to start test.</h1>
+        <p>Maybe, you should charge your account for permission</p>
+        <p><a class="btn btn-primary btn-lg" role="button" href="{{ url_for('pricing') }}">Charge on paypal!</a></p>
+      </div>
+</div>
+{% endblock %}

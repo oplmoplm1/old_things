@@ -1,0 +1,227 @@
+body{
+    background-color: #F3F3F3;
+}
+
+/*mainbody named searchResult*/
+.searchResult{
+    padding: 0;
+    border: 0;
+    margin: auto;
+    margin-top: 0;
+    margin-bottom: 0;
+    position: relative;
+    left: 0;
+    top: 36px;
+    width: 1024px;
+}
+
+/*mainbody css*/
+.searchPart{
+	  background-color: #F3F3F3;
+    margin-bottom: 10px;
+}
+
+
+.searchArea{
+	  background-color: ;
+}
+
+.line{
+    background-color: #E0E0E0;
+    margin-left: 10px;
+    margin-right: 10px;
+    height: 1px;
+}
+.searchLabel{
+    padding: 1em;
+    padding-left: 0px;
+    padding-bottom: 0.3em;
+
+    color: black;
+    font-size: 2em;
+    background-color: ;
+    width: 3em;
+}
+
+#searchInAreaInput{ 
+    padding: 0.5em;
+    padding-left: 1em;
+    margin: 0;
+
+    border: 0;
+	  background-color: white;
+    height: 1em;
+    font-size: 1em;
+    border-radius: 3px; 
+}
+
+.srearchButton{
+    color: white;
+    padding-left: 1em;
+    padding-right: 1em;
+    margin: 0;
+    border: 0;
+	  background-color: #205081;
+    height: 2em;
+    font-size: 1em;
+    border-radius: 3px;
+}
+
+.showResultCount{
+    color: white;
+    background-color: #205081;
+    padding: 1em;
+    padding-left: 15px;
+    padding-bottom: 0.3em;
+    font-size: 2em;
+    border-radius: 5px; 
+    
+}
+
+.paging{
+    background-color: #205081;
+	border-radius: 5px;
+	
+}
+
+.showResult{
+    background-color: #205081;
+	margin: auto;
+	border-radius: 5px;
+    width: 1024px;
+}
+
+.questionText{
+    background-color:  #3B7FC4;
+}
+
+.questionContent{
+    color: white;
+    background-color: #3B7FC4;
+    width : auto; 
+}
+
+.serialMark{
+    background-color: ;
+    color: black;
+}
+
+.serialNumber{
+    color: white;
+    background-color: #3B7FC4;
+    
+}
+
+.serialOption{
+    background-color: white;
+}
+
+.optionArea{
+    background-color: white;
+}
+
+.optionContent{
+    color: black;
+    background-color: white;
+}
+
+.answerArea{
+    background-color: #3B7FC4;
+}
+
+.answer{
+    color: white;
+    padding: .5em;
+    padding-right: .5em;;
+    font-size: 1.5em;
+	background-color: #3B7FC4;
+    float: left;
+    
+}
+
+.correctAnswer{
+    color: white;
+    padding: .5em;
+    font-size: 1.5em;
+  	background-color: #3B7FC4;
+}
+
+.instruct{
+    font-size: 1.2em;
+    padding :0.5em;
+  	background-color: lightgrey;
+    word-wrap: break-word; 
+    overflow: hidden;
+    
+}
+
+.partitionInResult{
+	background-color: #F3F3F3;
+	height: 10px;
+}
+
+.showPagingArea{
+	height: 4em;
+}
+
+.showPaging{
+    padding: 0;
+    margin: 0;
+    border: 0;
+    color: white;
+    font-size: 1.5em;
+    padding: 0.5em;
+}
+
+.showPaging a:link,
+.showPaging a:visited{
+    color: whitesmoke;
+    text-decoration: none;
+}
+
+.showPaging a:hover,
+.showPaging a:active{
+    color: whitesmoke;
+    text-decoration: none;
+}
+
+.prePage{
+    font-size: 1.2em;
+    padding: .3em;
+    padding-left: 1em;
+    margin: 0;
+    border: 0;
+    text-align: center;
+    background-color: #205081;
+    position: relative;
+    left: 0px;
+    top: .3em;
+}
+
+.pageNumber{
+    font-size: 1.2em;
+    padding: .3em;
+    margin: 0;
+    border: 0;
+    text-align: center;
+    background-color: #205081;
+    position: relative;
+    left: 0px;
+    top: .3em;
+}
+
+.nextPage{
+    font-size: 1.2em;
+    padding: .3em;
+    margin: 0;
+    border: 0;
+    text-align: center;
+    background-color: #205081;
+    position: relative;
+    left: 0px;
+    top: .3em;
+}
+
+
+
+

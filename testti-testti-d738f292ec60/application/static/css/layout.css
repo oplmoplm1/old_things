@@ -1,0 +1,329 @@
+body{
+    margin: 0;
+    border: 0;
+    padding: 0;
+    background-color: #F3F3F3;
+}
+
+#mainbody{
+    padding: 0;
+    border: 0;
+    margin: auto;
+    margin-top: 36px;
+    margin-bottom: 0;
+    width: 1024px;
+}
+
+
+
+.partition{
+    height: 3px;
+}
+
+.partitionForQuestion{
+	height: 12px;
+}
+/*header css*/
+#header{
+    font-family: arial,verdana,helvetica;
+    color: whitesmoke;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background-color: #205081;
+    list-style: none;
+    display: inline;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-width: 1024px;
+    height: 36px;
+}
+
+#showLogo{
+    background-color: #205081;
+    position: absolute;
+    top: 1px;
+    left: 18px;
+    height: 34px;
+    width:108px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#searchInput{
+	color: white;
+    font-size: .9em;
+    background-color: #3B7FC4;
+    position: absolute;
+    right: 180px;
+    top: 4px;
+    height: 25px;
+}
+
+.quicksearch input[type="text"] {
+    color: white;
+    text-align:left;
+    padding:1px;
+    padding-left: 10px;
+    width:150px;
+    border: 0;
+    border-radius:3px;
+}
+
+#signUp{
+    background-color: #336EA9;
+    position: absolute;
+    right: 90px;
+    top: 2px;
+    padding: 7px;
+    padding-left: 12px;
+    padding-right: 12px;
+    border-radius: 5px; 
+    cursor: pointer;
+}
+
+#logIn{
+    background-color: #205081;
+    position: absolute;
+    right: 15px;
+    top: 0px;
+    padding: 9px;
+    padding-left: 15px;
+    padding-right: 15px;
+    cursor: pointer;
+}
+
+.aTagOfHeader a:link,
+.aTagOfHeader a:visited{
+    color: whitesmoke;
+    text-decoration: none;
+}
+
+.aTagOfHeader a:hover,
+.aTagOfHeader a:active{
+    color: whitesmoke;
+    text-decoration: none;
+}
+
+/*leftsideBar css*/
+#countTimePart{
+    font-family: arial,verdana,helvetica;
+    font-size: 1.5em;
+    background-color: #F3F3F3;
+    position: fixed;
+    top:36px;
+    width: 264px;
+    height: 500px;
+}
+
+.leftsideBar{
+    left: 18px;
+    width: 228px;
+}
+
+#timerImg
+{
+    color: #1874CD;
+    background-color: #F3F3F3;
+    position: relative;
+    top: 10px;
+    height: 228px;
+    border-radius: 5px;
+    cursor: default;
+}
+
+#timeSpent{
+    color: #1874CD;
+    text-align: left;
+    background-color: #F3F3F3;
+    position: relative;
+    top: 25px;;
+    padding-top: 0.2em;
+    padding-bottom: 0.2em;
+    cursor: default;
+}
+
+.clockColon
+{
+    color: whitesmoke;
+    text-align:center;
+}
+
+.clockNum{
+    color: whitesmoke;
+    text-align:center;
+}
+
+#clockBlock
+{
+    text-align: center;
+    background-color:#1874CD;
+    position: relative;
+    top: 25px;
+    padding-bottom: 0.3em;
+    padding-top: 0.3em;
+    border-radius:5px;
+    cursor: default;
+
+}
+
+#pauseButton
+{
+    text-align: center;
+    color: #1874CD;
+    background-color: lightgray;
+    position: relative;
+    top: 30px;
+    padding-top: 0.3em;
+    padding-bottom: 0.3em;
+    border: 0;
+    border-radius:5px;
+    cursor: default;
+}
+
+#handInTestPaperButton
+{
+    color: #1874CD;
+    text-align: center;
+    background-color: lightgray;
+    position: relative;
+    top: 35px;
+    padding-top: 0.3em;
+    padding-bottom: 0.3em;
+    border: 0;
+    border-radius:5px;
+    cursor: default;
+}
+
+/*testPaperPart css*/
+ #testPaperPart{
+    text-align: right;
+    font-family: arial,verdana,helvetica;
+    background-color: #1874CD;
+    position: relative;
+    top:10px;
+    left:264px;
+    width: 760px;
+    border-radius: 5px;
+    cursor: default;
+}
+
+.testTitle{
+    font-size: 2em; 
+    background-color: #1874CD;
+	text-align: left;
+    width: 745px;
+    padding-top: 10px;
+    padding-left: 15px;
+    font-size: 2em; 
+    border-radius: 5px;
+}
+
+.showText{
+    font-size: 2em; 
+    background-color: #F5F5F5;
+	  text-align: left;
+    width: 730px;
+    padding-left: 1em;
+
+}
+
+
+.questionArea{
+
+    text-align: left;
+}
+
+.questionText{
+    background-color: #C1C1C1;
+}
+
+.question{
+    color: black;
+    background-color: #C1C1C1;
+    position: relative;
+    top: 0px;
+    left: 0px;
+}
+
+.serialNumber{
+    color: #205081;
+    background-color: #C1C1C1;
+}
+
+.serialOption{
+    color: #205081;
+/*    background-color: white;*/
+}
+
+.serialMark{
+    padding-left: 10px;
+    padding-right: 5px;
+    text-align: center;
+    line-height: 2em;
+    float: left;
+}
+
+.questionContent{
+        padding-left: 10px;
+    line-height: 2em;
+/*    background-color: lightyellow;*/
+    position: relative;
+    left: 0px;
+    width: 700px;
+    word-wrap:break-word; 
+    overflow:hidden;
+}
+
+.optionArea{
+    color: black;
+    background-color: white;
+}
+
+.radio{
+/*     display: none; */
+    float: right;
+}
+
+.chosenAnswer{
+    color: black;
+    text-align: center;
+    line-height: 30px;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    height: 30px;
+}
+
+.Answer{
+    background-color: white;
+    float:left;
+    left: 0;
+    top: 0;
+    margin-left: 5px;
+    display: inline;
+    width: 80px;
+    height: 30px;
+}
+
+.firstAnswer{
+    margin-left: 0;
+}
+
+/*footer*/
+#clear{
+    clear: both;
+}
+
+#footer{
+	color: white;
+    background-color: #205081;
+    position: relative;
+    top: 46px;
+    right:0px;
+    height: 36px;
+    width: 100%;
+}
+

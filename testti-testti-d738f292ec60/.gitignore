@@ -1,0 +1,8 @@
+*.py[cod]
+*.so
+*.egg
+*.egg-info
+dist
+build
+# Keep secret keys out of version control
+  secret_keys.py

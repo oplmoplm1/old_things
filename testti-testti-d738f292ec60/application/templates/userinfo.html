@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block content %}
+    <script type="text/javascript" src="../static/jquery-1.11.1.min.js"></script>
+    <div id="container">
+       <div>USER INFOMATION:</div><br/>
+       <div class="username">   {{ user.username }}</div><br/>
+       <div class="email">  {{ user.email }}</div><br/>
+       <div class="finished">{{ user.finished }}</div><br/>
+       <div class="correct">{{ user.correct }}</div><br/>
+    </div>
+{% endblock %}

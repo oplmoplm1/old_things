@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block content %}
+   <div class="jumbotron">
+   <form method="post" action="{{ url_for('signup') }}">
+      {{ s_form.hidden_tag() }}
+      <table class="center-block">
+        <tbody>
+          <tr><td>{{ s_form.username.label }}</td><td>{{ s_form.username }}</td></tr>
+          <tr><td>{{ s_form.password.label }}</td><td>{{ s_form.password }}</td></tr>
+          <tr><td>{{ s_form.repassword.label }}</td><td>{{ s_form.repassword }}</td></tr>
+          <tr><td>{{ s_form.email.label }}</td><td>{{ s_form.email  }}</td></tr>
+          <tr><td>{{ s_form.submit }}</td></tr>
+        </tbody>
+       </table>
+    </form>
+    </div>
+{% endblock %}

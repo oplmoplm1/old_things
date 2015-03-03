@@ -1,0 +1,24 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>登录页面</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<style type="text/css">
+	 #loginForm{
+	 	text-align: center;
+	 	margin-left: auto;
+	 	margin-top: 300px;
+	 }
+	</style>
+</head>
+  <body>
+	 <div id="loginForm">
+	 	用户登录
+	    <form action="/login" name="user" method="post">
+	    	帐号:<input name="userName" /><br/>
+	    	密码:<input name="userPassword" type="password"/><br/>
+	    	<input type="submit" value="登录">
+	    </form>
+	 </div>
+  </body>
+</html>

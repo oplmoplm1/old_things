@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="note.dao.NoteMapper">
+	<select id="selectNote" parameterType="string" resultMap="noteResultMap">
+		select * from tb_note where note_id = #{id}
+	</select>
+	<select id="selectNotes" parameterType="string" resultMap="noteResultMap">
+		select * from tb_note where user_id =#{id} order by note_id desc
+	</select>
+	<update id="updateNote" parameterType="note.entity.Note">
+		update tb_note 
+		<set>
+			<if test="noteTitle != null">note_title=#{noteTitle},</if>
+			<if test="noteTime != null">note_time=#{noteTime},</if>
+			<if test="noteContent != null">note_content=#{noteContent},</if>
+			<if test="userId != null">user_id=#{userId}</if>
+		</set>
+		where note_id =#{noteId}
+	</update>
+	<insert id="insertNote" parameterType="note.entity.Note">
+		insert into tb_note
+		values (#{noteId},#{noteTitle},#{noteTime},#{noteContent},#{userId})
+	</insert>
+	<delete id="deleteNote" parameterType="string">
+		delete from tb_note 
+		where note_id =#{noteId}
+	</delete>
+	<select id="selectNotesBetween" parameterType="note.utils.Paging" resultMap="noteResultMap">
+		select * from tb_note where user_id= #{userId} order by note_time desc limit #{curStart},#{maxSize} 
+	</select>
+	<resultMap id="noteResultMap" type="note.entity.Note">
+		<id property="noteId" column="note_id" />
+		<result property="noteTitle" column="note_title"/>
+		<result property="noteTime" column="note_time"/>
+		<result property="noteContent" column="note_content"/>
+		<result property="userId" column="user_id"/>
+	</resultMap>
+</mapper>

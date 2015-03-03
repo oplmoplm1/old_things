@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="note.dao.UserMapper">
+	<select id="selectUserByName" parameterType="string" resultMap="userResultMap">
+		select * from tb_user where user_name =#{userName}
+	</select>
+	<select id="selectUserById" parameterType="string" resultMap="userResultMap">
+		select * from tb_user where user_id =#{userId}
+	</select>
+	<insert id="insertUser" parameterType="note.entity.User" >
+		insert into tb_user values (#{userId},#{userName},#{userDetail},#{userPassword})
+	</insert>
+	<update id="updateUser" parameterType="note.entity.User">
+		update tb_user set user_name =#{userName},user_password=#{userPassword},user_detail=#{userDetail} 
+		where user_id =#{userId}
+	</update>
+	<delete id="deleteUser" parameterType="string" >
+		delete from tb_user where user_id =#{userId}
+	</delete>
+	<resultMap id="userResultMap" type="note.entity.User">
+		<id property="userId" column="user_id" />
+		<result property="userName" column="user_name"/>
+		<result property="userPassword" column="user_password"/>
+		<result property="userDetail" column="user_detail"/>
+	</resultMap>
+</mapper>

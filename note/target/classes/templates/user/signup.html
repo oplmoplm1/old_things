@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>注册页面</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<style type="text/css">
+	 #signForm{
+	 	text-align: center;
+	 	margin-left: auto;
+	 	margin-top: 300px;
+	 }
+	</style>
+</head>
+  <body>
+	 <div id="signForm">
+	 	用户注册
+	    <form action="sign_up" name="user" method="post">
+	    	用户帐号:<input name="userName" /><br/>
+	    	用户密码:<input name="userPassword" type="password"/><br/>
+	    	确定密码:<input name="rePassword" type="password"/><br/>
+	    	详细信息:<input name="userDetail" /><br/>
+	    	<input type="submit" value="注册" />
+	    </form>
+	 </div>
+  </body>
+</html>

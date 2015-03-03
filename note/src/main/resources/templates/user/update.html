@@ -1,0 +1,31 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>修改页面</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<style type="text/css">
+	 #signForm{
+	 	text-align: center;
+	 	margin-left: auto;
+	 	margin-top: 300px;
+	 }
+	 input[name=userId]{
+	 	display:none;
+	 }
+	</style>
+</head>
+  <body>
+	 <div id="signForm">
+	 	用户修改
+	    <form action="update_user" name="user" method="post">
+	    	用户帐号:<input name="userName" th:value="${userName}"/><br/>
+	    	新密码:<input name="userPassword" type="password"/><br/>
+	    	确认密码:<input name="rePassword" type="password"/><br/>
+	    	详细信息:<input name="userDetail"   th:value="${user.userDetail}"/><br/>
+	    	<input name="userId" th:value="${user.userId}"/>
+	    	<input type="submit" value="修改" />
+	    </form>
+	 </div>
+  </body>
+</html>
+

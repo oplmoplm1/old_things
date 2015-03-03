@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="2.0.1" sequence="0" timestamp="1400481781237" analysisTimestamp="1400481803245" release="">
+  <Project>
+    <Jar>E:\Workspaces\MyEclipse 8.6\note\target\classes</Jar>
+    <AuxClasspathEntry>C:\Users\LY\AppData\Local\Temp\findbugs5569514666444943807.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\LY\AppData\Local\Temp\findbugs6917274540700837014.jar</AuxClasspathEntry>
+    <SrcDir>E:\Workspaces\MyEclipse 8.6\note\src\main\java</SrcDir>
+  </Project>
+  <Errors errors="0" missingClasses="13">
+    <MissingClass>org.apache.ibatis.io.Resources</MissingClass>
+    <MissingClass>org.apache.ibatis.session.SqlSession</MissingClass>
+    <MissingClass>org.apache.ibatis.session.SqlSessionFactory</MissingClass>
+    <MissingClass>org.apache.ibatis.session.SqlSessionFactoryBuilder</MissingClass>
+    <MissingClass>org.springframework.boot.SpringApplication</MissingClass>
+    <MissingClass>org.springframework.boot.autoconfigure.EnableAutoConfiguration</MissingClass>
+    <MissingClass>org.springframework.context.ConfigurableApplicationContext</MissingClass>
+    <MissingClass>org.springframework.stereotype.Controller</MissingClass>
+    <MissingClass>org.springframework.stereotype.Service</MissingClass>
+    <MissingClass>org.springframework.ui.Model</MissingClass>
+    <MissingClass>org.springframework.web.bind.annotation.RequestMapping</MissingClass>
+    <MissingClass>org.springframework.web.bind.annotation.RequestParam</MissingClass>
+    <MissingClass>org.springframework.web.bind.annotation.SessionAttributes</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Mon, 19 May 2014 14:43:01 +0800" total_classes="11" referenced_classes="32" total_bugs="0" total_size="376" num_packages="6" vm_version="20.6-b01" cpu_seconds="2.37" clock_seconds="2.01" peak_mbytes="143.62" alloc_mbytes="494.94" gc_seconds="0.22">
+    <FileStats path="note/controller/UserAction.java" bugCount="0" size="71"/>
+    <FileStats path="note/dao/NoteMapper.java" bugCount="0" size="7"/>
+    <FileStats path="note/dao/UserMapper.java" bugCount="0" size="6"/>
+    <FileStats path="note/daoimp/NoteMapperImp.java" bugCount="0" size="36"/>
+    <FileStats path="note/daoimp/UserMapperImp.java" bugCount="0" size="35"/>
+    <FileStats path="note/entity/Note.java" bugCount="0" size="46"/>
+    <FileStats path="note/entity/User.java" bugCount="0" size="39"/>
+    <FileStats path="note/service/UserService.java" bugCount="0" size="62"/>
+    <FileStats path="note/utils/BaseDao.java" bugCount="0" size="17"/>
+    <FileStats path="note/utils/CommonUtils.java" bugCount="0" size="10"/>
+    <FileStats path="note/utils/Paging.java" bugCount="0" size="47"/>
+    <PackageStats package="note.controller" total_bugs="0" total_types="1" total_size="71">
+      <ClassStats class="note.controller.UserAction" sourceFile="UserAction.java" interface="false" size="71" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="note.dao" total_bugs="0" total_types="2" total_size="13">
+      <ClassStats class="note.dao.NoteMapper" sourceFile="NoteMapper.java" interface="true" size="7" bugs="0"/>
+      <ClassStats class="note.dao.UserMapper" sourceFile="UserMapper.java" interface="true" size="6" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="note.daoimp" total_bugs="0" total_types="2" total_size="71">
+      <ClassStats class="note.daoimp.NoteMapperImp" sourceFile="NoteMapperImp.java" interface="false" size="36" bugs="0"/>
+      <ClassStats class="note.daoimp.UserMapperImp" sourceFile="UserMapperImp.java" interface="false" size="35" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="note.entity" total_bugs="0" total_types="2" total_size="85">
+      <ClassStats class="note.entity.Note" sourceFile="Note.java" interface="false" size="46" bugs="0"/>
+      <ClassStats class="note.entity.User" sourceFile="User.java" interface="false" size="39" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="note.service" total_bugs="0" total_types="1" total_size="62">
+      <ClassStats class="note.service.UserService" sourceFile="UserService.java" interface="false" size="62" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="note.utils" total_bugs="0" total_types="3" total_size="74">
+      <ClassStats class="note.utils.BaseDao" sourceFile="BaseDao.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="note.utils.CommonUtils" sourceFile="CommonUtils.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="note.utils.Paging" sourceFile="Paging.java" interface="false" size="47" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="315" invocations="393" avgMicrosecondsPerInvocation="802" maxMicrosecondsPerInvocation="29155" standardDeviationMircosecondsPerInvocation="1567"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="194" invocations="83" avgMicrosecondsPerInvocation="2345" maxMicrosecondsPerInvocation="172401" standardDeviationMircosecondsPerInvocation="18781"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="190" invocations="390" avgMicrosecondsPerInvocation="489" maxMicrosecondsPerInvocation="20341" standardDeviationMircosecondsPerInvocation="1712"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="54" invocations="32" avgMicrosecondsPerInvocation="1688" maxMicrosecondsPerInvocation="15719" standardDeviationMircosecondsPerInvocation="3072"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="42" invocations="93" avgMicrosecondsPerInvocation="453" maxMicrosecondsPerInvocation="34581" standardDeviationMircosecondsPerInvocation="3559"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="41" invocations="82" avgMicrosecondsPerInvocation="506" maxMicrosecondsPerInvocation="7458" standardDeviationMircosecondsPerInvocation="1024"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="37" invocations="83" avgMicrosecondsPerInvocation="451" maxMicrosecondsPerInvocation="11764" standardDeviationMircosecondsPerInvocation="1301"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="36" invocations="32" avgMicrosecondsPerInvocation="1154" maxMicrosecondsPerInvocation="6754" standardDeviationMircosecondsPerInvocation="1731"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="36" invocations="82" avgMicrosecondsPerInvocation="448" maxMicrosecondsPerInvocation="2569" standardDeviationMircosecondsPerInvocation="482"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="33" invocations="32" avgMicrosecondsPerInvocation="1047" maxMicrosecondsPerInvocation="10701" standardDeviationMircosecondsPerInvocation="2009"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="32" invocations="82" avgMicrosecondsPerInvocation="396" maxMicrosecondsPerInvocation="11346" standardDeviationMircosecondsPerInvocation="1244"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="29" invocations="153" avgMicrosecondsPerInvocation="191" maxMicrosecondsPerInvocation="11289" standardDeviationMircosecondsPerInvocation="922"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="29" invocations="82" avgMicrosecondsPerInvocation="357" maxMicrosecondsPerInvocation="2238" standardDeviationMircosecondsPerInvocation="416"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.impl.ZipCodeBaseFactory" totalMilliseconds="26" invocations="12" avgMicrosecondsPerInvocation="2193" maxMicrosecondsPerInvocation="20846" standardDeviationMircosecondsPerInvocation="5627"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="25" invocations="51" avgMicrosecondsPerInvocation="507" maxMicrosecondsPerInvocation="12490" standardDeviationMircosecondsPerInvocation="1781"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

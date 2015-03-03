@@ -1,0 +1,50 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>笔记列表</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <style type="text/css">
+    	#welcome{
+    		float:right;
+    	}
+    	.list_content{
+    		text-align:left;
+    		margin-left:auto;
+    		width:600px;
+    	}
+    	
+    	.list_content div{
+    		font-weight:normal;
+            word-break : break-all;
+            word-wrap : break-word;
+    	}
+    	.note_title{
+    		font-weight:bold;
+    	}
+    	.note_time{
+    		font-style: italic;
+    	}
+    	add_note{
+    		float:right;
+    	}
+    </style>
+</head>
+<body>
+    <div  id="welcome">
+    <p th:text="'Hello, ' + ${userName} + '!'" />
+    <a th:href="@{update_user_page}">修改帐号</a>
+    </div>
+    <a id="add_note" href="add_note">添加笔记</a>
+    <h3>笔记目录</h3>
+    <div class="table_content">
+        <div  th:each="note : ${notes}">
+            <div class="note_title" ><a th:text="${note.noteTitle}" th:href="@{get_one_note(note_id=${note.noteId})}" ></a></div><br/>
+            <div class="note_time" th:text="${note.noteTime}"></div><br/>
+            <div class="note_content" th:text="${note.noteContent}">
+            </div>
+            <br/>
+        </div>
+    </div>
+    	<span>  <div th:text="'当前页码为'+${page}" /></span><a th:href="@{noteList(page=${page}-1)}">上一页</a>  <a th:href="@{noteList(page=${page}+1)}">下一页</a> 
+</body>
+</html>

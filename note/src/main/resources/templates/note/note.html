@@ -1,0 +1,58 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>编辑笔记</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <style type="text/css">
+    	#welcome{
+    		float:right;
+    	}
+    	.list_content{
+    		text-align:left;
+    		margin-left:auto;
+    		width:600px;
+    	}
+    	
+    	.list_content div{
+    		font-weight:normal;
+            word-break : break-all;
+            word-wrap : break-word;
+    	}
+    	.note_title{
+    		font-weight:bold;
+    	}
+    	.note_time{
+    		font-style: italic;
+    	}
+    	add_note{
+    		float:right;
+    	}
+    	input[name=noteContent]{
+    		width:300px;
+    		height:180px;
+    	}
+    	input[name=noteTitle]{
+    		width:300px;
+    	}
+    	input[name=noteId]{
+    		display: none;
+    	}
+    	input[name=userId]{
+    		display: none;
+    	}
+    </style>
+</head>
+<body>
+    <p id="welcome" th:text="'Hello, ' + ${userName} + '!'" />
+    <a id="add_note" href="add_note">添加笔记</a>
+    <a id="delete_note" th:href="@{delete_note(note_id=${note.noteId})}">删除笔记</a>
+    <form name="table_content" action="update" method="post">
+          <h4>标题:<input name="noteTitle" th:value="${note.noteTitle}" /><br/></h4>
+                          内容:<input name="noteContent" th:value="${note.noteContent}" /><br/>
+                          最后修改:<div id="noteTime" th:text="${note.noteTime}"></div><br/>
+          <input name="noteId" th:value="${note.noteId}"/>
+          <input name="userId" th:value="${note.userId}"/>
+          <input type="submit"/>
+    </form>
+</body>
+</html>

@@ -1,7 +1,11 @@
 # java&&js web gallery 
 this is a demo project wrote web gallery
+
 (wrote early..
-(there is just frontend part
+
+(here is just frontend part
+
+(skip it better -_-
 
 Used:
 
@@ -9,3 +13,4 @@ Used:
 	
 	fancybox (used for gallery effect
 	
+	uploadify (

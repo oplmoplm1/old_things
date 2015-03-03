@@ -1,4 +1,4 @@
-# java-graph-theory-demonstration
+# java-web-demo
 this is a demo project for simple note (hello world  = =
 
 Used:
